@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script type="text/javascript" charset="utf-8">
+      var socket = io();
+      socket.on('connect', function() {
+          socket.emit('my event', {Connection: 'I\'m connected!'});
+      });
+  </script>
+</head>
+
+<body>
+  <button class='buttonW' id = 'W' name= '17' type='button' ontouchstart="mouseDown('W')" ontouchend="mouseUp('W')"> W </button>
+  <button class='buttonA' id = 'A' name= '30' type='button' ontouchstart="mouseDown('A')" ontouchend="mouseUp('A')"> A </button>
+  <button class='buttonS' id = 'S' name= '31' type='button' ontouchstart="mouseDown('S')" ontouchend="mouseUp('S')"> S </button>
+  <button class='buttonD' id = 'D' name= '32' type='button' ontouchstart="mouseDown('D')" ontouchend="mouseUp('D')"> D </button>
+  <button class='buttonZ' id = 'Z' name= '44' type='button' ontouchstart="mouseDown('Z')" ontouchend="mouseUp('Z')"> Z </button>
+  <button class='buttonX' id = 'X' name= '45' type='button' ontouchstart="mouseDown('X')" ontouchend="mouseUp('X')"> X </button>
+
+
+
+  <script>
+  function mouseDown(buttonid) {
+    button = document.getElementById(buttonid).name;
+    socket.emit('my event', {PRESSKEY: button});
+    document.getElementById("demo").innerHTML = buttonid;  
+  }
+
+  function mouseUp(buttonid) {
+    button = document.getElementById(buttonid).name;
+    socket.emit('my event', {RELEASEKEY: button});
+    document.getElementById("demo").innerHTML = buttonid;  
+  }
+  </script>
+
+    <p class = 'helpfulmsg' id="demo">Keys.</div>  
+<body>	
+
+
+
+
+
+</html>

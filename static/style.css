@@ -1,0 +1,62 @@
+.buttonW {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  text-align: center;
+  width: 20px;
+  padding:0px;
+}
+
+.buttonA {
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  text-align: center;
+  width: 20px;
+  padding:0px;
+}
+
+.buttonS {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  text-align: center;
+  width: 20px;
+  padding:0px;
+}
+
+.buttonD {
+  position: absolute;
+  top: 16px;
+  left: 40px;
+  text-align: center;
+  width: 20px;
+  padding:0px;
+}
+
+.buttonZ {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  width: 20px;
+  padding:0px;
+}
+
+.buttonX {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  text-align: center;
+  width: 20px;
+  padding:0px;
+}
+
+.helpfulmsg {
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  text-align: center;
+  width: 50px;
+  padding:0px;
+}
